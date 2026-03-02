@@ -746,7 +746,7 @@ function AttendancePage({ employees: emps, loading: empsLoading, addToast }) {
           <div className="form-row">
             <div className="form-group">
               <label>Date</label>
-              <input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} />
+              <input type="date" value={form.date} max={new Date().toISOString().split("T")[0]} onChange={(e) => setForm({ ...form, date: e.target.value })} />
             </div>
             <div className="form-group">
               <label>Status</label>
